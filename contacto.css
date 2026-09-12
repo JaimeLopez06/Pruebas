@@ -62,17 +62,28 @@ body {
     border: 1px solid #2a2a2a;
 }
 
-.formulario label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 1rem;
-    opacity: 0.85;
+/* BLOQUES */
+.form-block {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: #111;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
 }
 
+.form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+/* INPUTS, TEXTAREAS, SELECTS */
 .formulario input,
-.formulario textarea {
+.formulario textarea,
+.formulario select {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     background: #0e0e0e;
     border: 1px solid #2a2a2a;
     border-radius: 6px;
@@ -83,11 +94,35 @@ body {
 }
 
 .formulario input:focus,
-.formulario textarea:focus {
+.formulario textarea:focus,
+.formulario select:focus {
     border-color: #d4af37;
     outline: none;
 }
 
+/* SELECT NORMAL → flecha dorada */
+.formulario select:not(.select-multiple) {
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%23d4af37' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+/* SELECT MULTIPLE */
+.select-multiple {
+    height: 140px;
+    appearance: none;
+    overflow-y: auto;
+}
+
+/* Info debajo del select multiple */
+.multi-info {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
 .btn-enviar {
     width: 100%;
     padding: 14px;
@@ -124,4 +159,36 @@ body {
 .fade.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* TAG SELECTOR PREMIUM */
+.tag-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tag-selector label {
+    cursor: pointer;
+}
+
+.tag-selector input {
+    display: none;
+}
+
+.tag-selector span {
+    padding: 10px 18px;
+    background: #0e0e0e;
+    border: 1px solid #2a2a2a;
+    border-radius: 25px;
+    color: #e6e6e6;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.tag-selector input:checked + span {
+    background: #d4af37;
+    color: #0e0e0e;
+    border-color: #d4af37;
+    box-shadow: 0 0 10px #d4af37;
 }
