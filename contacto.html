@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto — Jaime López</title>
+    <link rel="stylesheet" href="contacto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="hero">
+        <h1>Contacto Privado</h1>
+        <p>Solicita una reunión exclusiva</p>
+    </header>
+
+    <main>
+
+        <section class="contact-section fade">
+            <h2>Formulario de contacto</h2>
+            <p class="desc">
+                Rellena este formulario para solicitar una reunión privada.  
+                Solo atiendo proyectos que buscan excelencia y diseño de alto nivel.
+            </p>
+
+            <!-- FORMULARIO QUE ENVÍA A TU CORREO -->
+            <form class="formulario" 
+                  action="https://formsubmit.co/jaimelopezc06@gmail.com" 
+                  method="POST">
+
+                <!-- Seguridad -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde tu web de lujo">
+                <input type="hidden" name="_next" value="https://tu-dominio.com/gracias.html">
+
+                <label>Nombre completo</label>
+                <input type="text" name="nombre" required>
+
+                <label>Email</label>
+                <input type="email" name="email" required>
+
+                <label>Teléfono</label>
+                <input type="tel" name="telefono" required>
+
+                <label>Mensaje</label>
+                <textarea name="mensaje" rows="6" required></textarea>
+
+                <button type="submit" class="btn-enviar">Enviar solicitud</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Jaime López — Web Design Boutique</p>
+    </footer>
+
+    <script>
+        document.addEventListener("scroll", () => {
+            const fades = document.querySelectorAll(".fade");
+            fades.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 120) {
+                    el.classList.add("visible");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

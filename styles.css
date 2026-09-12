@@ -1,0 +1,170 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0e0e0e;
+    color: #e6e6e6;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem;
+    letter-spacing: 4px;
+    color: #d4af37;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.tagline {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    opacity: 0.7;
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 32px;
+    background: #d4af37;
+    color: #0e0e0e;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cta:hover {
+    background: #b8962f;
+}
+
+/* SECTIONS */
+main section {
+    width: 85%;
+    max-width: 1100px;
+    margin: 80px auto;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #d4af37;
+}
+
+p {
+    font-size: 1.05rem;
+    opacity: 0.85;
+    line-height: 1.7;
+}
+
+/* SERVICES */
+.service-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.service {
+    background: #151515;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #2a2a2a;
+    transition: 0.3s;
+}
+
+.service:hover {
+    border-color: #d4af37;
+}
+
+.service h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    margin-top: 15px;
+    color: #d4af37;
+    font-weight: 600;
+}
+
+/* PROCESS */
+.steps {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.step {
+    background: #151515;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #2a2a2a;
+    transition: 0.3s;
+}
+
+.step:hover {
+    border-color: #d4af37;
+}
+
+/* PROYECTOS PREVIEW */
+.proyectos-preview {
+    text-align: center;
+}
+
+.proyectos-preview .section-desc {
+    font-size: 1.1rem;
+    opacity: 0.75;
+    margin-bottom: 35px;
+}
+
+/* WHY */
+.why ul li {
+    margin-bottom: 12px;
+    opacity: 0.85;
+}
+
+/* CONTACT */
+.contact p {
+    margin-bottom: 25px;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 40px;
+    background: #0a0a0a;
+    color: #777;
+    margin-top: 80px;
+}
+
+/* ANIMACIONES */
+.fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+.fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
